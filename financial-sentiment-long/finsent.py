@@ -88,9 +88,9 @@ def get_output_label(index):
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
     ## User can pass the article text, model name and chunksize as arguments
-    parser.add_argument('--fpath', type=str, help='serial port', required=False, default='')
-    parser.add_argument('--model_name', type=str, help='serial port', required=False, default='')
-    parser.add_argument('--chunksize', type=int, help='board id, check docs to get a list of supported boards',
+    parser.add_argument('--fpath', type=str, help='Path of the file containing URLS to parse', required=False, default='')
+    parser.add_argument('--model_name', type=str, help='Name of the pre-trained model', required=False, default='')
+    parser.add_argument('--chunksize', type=int, help='Chunksize depends on the max length of tokens the model can accept',
                         required=True)
     args = parser.parse_args()
     
